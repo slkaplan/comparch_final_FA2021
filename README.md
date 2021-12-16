@@ -23,4 +23,10 @@ The code for this project is split up into multiple modules and test files in or
 
 # Wiring 
 
+The wiring for this project can be difficult so re-checking with the datasheet for these parts is essential, especially if you are using part replacements. It is also recommended you check Arduino tutorials for using the H-bridge wiring since there are fewer examples of it working with an FPGA. Also note that the FPGA is wired to power and ground but not shown in the schematic.
+
+<img src="pics/Circuit Diagram.png"  />
+
+**Fig. 1 Wiring diagram of all the necessary components for this project. Note that the wiring schematic provided for the parts are not to scale.**
+
 # Sources
