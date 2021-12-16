@@ -26,12 +26,12 @@ logic [N-1:0] counter;
 // SOLUTION START
 
 always_comb begin
-  out = ena & ( (counter < duty) | &counter );
+  out = ena & ((counter < duty) | & counter );
 end
 
 always_ff @(posedge clk) begin
   if(rst) begin
-    counter <=0;
+    counter <= 0;
   end
   else if (step) begin
     counter <= counter + 1;

@@ -3,7 +3,7 @@
 
 module main(
   // On board signals
-  sysclk, buttons, motor, rgb, pmod
+  clk, buttons, in1, in2, rgb, pmod, leds, out
 );
 parameter SYS_CLK_HZ = 12_000_000.0; // aka ticks per second
 parameter SYS_CLK_PERIOD_NS = (1_000_000_000.0/SYS_CLK_HZ);
@@ -17,28 +17,26 @@ parameter PWM_TICKS = CLK_HZ*PWM_PERIOD_US/1_000_000; //1kHz modulation frequenc
 
 
 //Module I/O and parameters
-input wire sysclk;
-wire clk;
+input logic clk;
 input wire [1:0] buttons;
 logic rst; always_comb rst = buttons[0]; // Use button 0 as a reset signal.
-output logic motor;
+output logic in1;
+output logic in2;
 output logic [2:0] rgb;
-output logic [7:0] pmod;  always_comb pmod = {6'b0, sysclk, clk}; // You can use the pmod port for debugging!
-
+output logic [7:0] pmod;  always_comb pmod = {6'b0, clk}; // You can use the pmod port for debugging!
+output logic [1:0] leds;
+output logic out; 
 
 // LED PWM logic.
 logic [PWM_WIDTH-1:0] motor_pwm;
 always @(posedge clk) begin
   if(rst) begin
     motor_pwm <= 0;
-  end else begin
-    if(1==1) begin
-      motor_pwm <= 9'b001000000;
-      
-    end
-    else begin
-      
-    end
+  end 
+  else begin
+      motor_pwm <= 9'd100;
+      in1 <= 1; 
+      in2 <= 0;
   end
 end
 
@@ -46,7 +44,7 @@ end
 
 pwm #(.N(PWM_WIDTH)) PWM_MOTOR (
   .clk(clk), .rst(rst), .ena(1'b1), .step(1'b1), .duty(motor_pwm),
-  .out(leds[0])
+  .out(out)
 );
 
 
