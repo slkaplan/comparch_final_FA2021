@@ -29,7 +29,10 @@ The wiring for this project can be difficult so re-checking with the datasheet f
 <img src="pics/Circuit Diagram.png"  />
 
 **Fig. 1 Wiring diagram of all the necessary components for this project. Note that the wiring schematic provided for the parts are not to scale.**
-
+# How To
+1. Set up the FPGA, Potentiometer, H bridge motor controller, and motor according to the circuit diagram.
+2. Download and install dependencies as listed above.
+3. Run make_main.bit, make_program_fpga_vivado, and make program_fpga_diligent then turn the potentiometer to watch the motor spin!
 # Sources
 
 * [Using Motor Driver with Arduino](https://create.arduino.cc/projecthub/ryanchan/how-to-use-the-l298n-motor-driver-b124c5)
