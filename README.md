@@ -13,6 +13,7 @@ The purpose of this project is to use a simple potentiometer in order to change 
 * [Potentiometer](https://www.amazon.com/MCIGICM-Breadboard-Trim-Potentiometer-Arduino/dp/B07S69443J/ref=sr_1_8?_encoding=UTF8&c=ts&keywords=Potentiometers&qid=1639676584&s=industrial&sr=1-8&ts_id=306810011)
 * [1.2 kOhm Resistor](https://www.amazon.com/EDGELEC-Resistor-Tolerance-Resistance-Optional/dp/B07HDGCWCR/ref=sr_1_3?keywords=1.2+kohm+resistor&qid=1639677008&sr=8-3)
 * [Single Core Wire](https://www.amazon.com/TUOFENG-Wire-Solid-different-colored-spools/dp/B07TX6BX47/ref=sr_1_2?keywords=single+core+wire&qid=1639677047&s=hi&sr=1-2)
+* [9V Battery](https://www.amazon.com/Amazon-Basics-Performance-All-Purpose-Batteries/dp/B00MH4QM1S/ref=sr_1_5?keywords=9v+battery&qid=1639682927&rdc=1&sr=8-5)
 
 # Dependencies
 
@@ -30,3 +31,9 @@ The wiring for this project can be difficult so re-checking with the datasheet f
 **Fig. 1 Wiring diagram of all the necessary components for this project. Note that the wiring schematic provided for the parts are not to scale.**
 
 # Sources
+
+* [Using Motor Driver with Arduino](https://create.arduino.cc/projecthub/ryanchan/how-to-use-the-l298n-motor-driver-b124c5)
+* [XADC Documentation](https://www.xilinx.com/support/documentation/user_guides/ug480_7Series_XADC.pdf)
+* [XADC Example Code](https://github.com/Digilent/Cmod-A7-15T-XADC?_ga=2.109299079.386762158.1639440346-1772712610.1632953568)
+* [FPGA Wiring Schematic](https://digilent.com/reference/_media/reference/programmable-logic/cmod-a7/cmod_a7_sch_rev_c0.pdf)
+* [Computer Architecture Repo](https://github.com/avinash-nonholonomy/olin-cafe-f21)
