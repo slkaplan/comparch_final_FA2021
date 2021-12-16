@@ -35,10 +35,6 @@ The wiring for this project can be difficult so re-checking with the datasheet f
 <img src="pics/Circuit Diagram.png"  />
 
 **Fig. 1 Wiring diagram of all the necessary components for this project. Note that the wiring schematic provided for the parts are not to scale.**
-# How To
-1. Set up the FPGA, Potentiometer, H bridge motor controller, and motor according to the circuit diagram.
-2. Download and install dependencies as listed above.
-3. Run make_main.bit, make_program_fpga_vivado, and make program_fpga_diligent then turn the potentiometer to watch the motor spin!
 
 # XADC
 The Xilinx Analog to Digital Converter is very tricky (i.e., we didn't...). However here is what we figured out and hopefully you will have more luck. 
@@ -50,6 +46,14 @@ First you want to down this first zip file on this [page](https://github.com/Dig
 Then you can double click on the `wiz`file to edit. Change to single channel mode, disable alarms, and select VPVN input under channel select. Click ok and make sure Vivado doesn't crash regenerating the `ip`
 
 After that it's very important that you synthesize and program the FPGA using Vivado. Using commandline interfaces will not incorporate the wizard and your XADC module will not work!
+
+# How To
+1. Set up the FPGA, Potentiometer, H bridge motor controller, and motor according to the circuit diagram.
+2. Download and install dependencies as listed above.
+3. Run make_main.bit, make_program_fpga_vivado, and make program_fpga_diligent to test the PWM.
+4. Synthesize as above in the XADC section and make sure that pot.sv, main.sv, and the wizard are in your sources.
+5. Move the potentiometer and watch your motor spin.
+
 
 # Sources
 
