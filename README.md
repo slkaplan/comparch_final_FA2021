@@ -4,6 +4,9 @@
 
 # Overview
 
+<img src = "pics/circuit_real.png"/>
+
+
 The purpose of this project is to use a simple potentiometer in order to change the speed of a DC motor. The analog signal of the potentiometer will be taken in by the FPGA then processed such that the proper PWM signal can be sent through a H-bridge motor drive controller to the brushed DC motor.
 
 # Parts
