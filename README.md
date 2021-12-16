@@ -17,6 +17,9 @@ The purpose of this project is to use a simple potentiometer in order to change 
 
 # Dependencies
 
+* [Vivado]()
+* [Icarus/System Verilog]()
+* [GTK Wave]()
 
 # Code 
 
@@ -33,6 +36,18 @@ The wiring for this project can be difficult so re-checking with the datasheet f
 1. Set up the FPGA, Potentiometer, H bridge motor controller, and motor according to the circuit diagram.
 2. Download and install dependencies as listed above.
 3. Run make_main.bit, make_program_fpga_vivado, and make program_fpga_diligent then turn the potentiometer to watch the motor spin!
+
+# XADC
+The Xilinx Analog to Digital Converter is very tricky (i.e., we didn't...). However here is what we figured out and hopefully you will have more luck. 
+
+First you want to down this first zip file on this [page](https://github.com/Digilent/Cmod-A7-15T-XADC/releases/tag/v2018.2-1). Then open vivado with 
+
+`vivado Cmod-A7-15T-XADC.xpr`
+
+Then you can double click on the `wiz`file to edit. Change to single channel mode, disable alarms, and select VPVN input under channel select. Click ok and make sure Vivado doesn't crash regenerating the `ip`
+
+After that it's very important that you synthesize and program the FPGA using Vivado. Using commandline interfaces will not incorporate the wizard and your XADC module will not work!
+
 # Sources
 
 * [Using Motor Driver with Arduino](https://create.arduino.cc/projecthub/ryanchan/how-to-use-the-l298n-motor-driver-b124c5)

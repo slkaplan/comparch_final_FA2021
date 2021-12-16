@@ -47,6 +47,19 @@ pwm #(.N(PWM_WIDTH)) PWM_MOTOR (
   .out(out)
 );
 
+pot #(.sysclk(sysclk),
+    .btn0(btn0),
+    .vp_in(),
+    .vn_in(),
+    .data_out(),
+    .led(),
+    .led_g(),
+    .led_b(),
+    .pio(),
+    .xa_n(),
+    .xa_p()
+    );
+
 
 endmodule
 
